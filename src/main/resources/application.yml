@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: Git Data Service
+    version: 1.0.0
+  jackson.mapper.sort-properties-alphabetically: false
+
+app:
+    title: User Git Data Service
+    version: 1.0.0 # Follows https://semver.org/
+
+clients:
+  github:
+    base-url: https://api.github.com/
+    user-url: /users/{user}
+    user-repo-url: /users/{user}/repos
+
+hazelcast:
+  cluster-name: git-data-service
+  map:
+    user-repo-data:
+      time-to-live-seconds: 600
+      eviction:
+        eviction-policy: LRU
+        max-size-policy: PER_NODE
+        size: 10000

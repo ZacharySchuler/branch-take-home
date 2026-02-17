@@ -1,0 +1,81 @@
+{
+  "info": {
+    "_postman_id": "ada12837-6433-4a9b-9c8a-f43fae18137e",
+    "name": "GitDataService(Branch Takehome)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24644960"
+  },
+  "item": [
+    {
+      "name": "client/github",
+      "item": [
+        {
+          "name": "github user (/user/{user}",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.github.com/users/octocat",
+              "protocol": "https",
+              "host": [
+                "api",
+                "github",
+                "com"
+              ],
+              "path": [
+                "users",
+                "octocat"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "github user repos (/users/{user}/repos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.github.com/users/octocat/repos",
+              "protocol": "https",
+              "host": [
+                "api",
+                "github",
+                "com"
+              ],
+              "path": [
+                "users",
+                "octocat",
+                "repos"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Git Data Service Endpoint (/api/v1/git-data/users/{userName}/repos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/v1/git-data/users/octocat/repos",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "git-data",
+            "users",
+            "octocat",
+            "repos"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
